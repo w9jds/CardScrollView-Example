@@ -24,7 +24,7 @@ public class MyActivity extends Activity
         for (int i = 0; i < mlsText.size(); i++)
         {
             Card newCard = new Card(this);
-            newCard.setFullScreenImages(true);
+            newCard.setImageLayout(Card.ImageLayout.FULL);
             newCard.setText(mlsText.get(i));
             mlcCards.add(newCard);
         }
