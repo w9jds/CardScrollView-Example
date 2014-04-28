@@ -39,18 +39,6 @@ public class MyActivity extends Activity
     private class csaAdapter extends CardScrollAdapter
     {
         @Override
-        public int findIdPosition(Object id)
-        {
-            return -1;
-        }
-
-        @Override
-        public int findItemPosition(Object item)
-        {
-            return mlcCards.indexOf(item);
-        }
-
-        @Override
         public int getCount()
         {
             return mlcCards.size();
@@ -65,7 +53,13 @@ public class MyActivity extends Activity
         @Override
         public View getView(int position, View convertView, ViewGroup parent)
         {
-            return mlcCards.get(position).toView();
+            return mlcCards.get(position).getView();
+        }
+
+        @Override
+        public int getPosition(Object o)
+        {
+            return 0;
         }
     }
 }
